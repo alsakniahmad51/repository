@@ -1,8 +1,10 @@
+import 'package:repository/core/functions/navigator.dart';
 import 'package:repository/features/auth/presentation/manager/cubit/auth_cubit.dart';
 import 'package:repository/features/auth/presentation/widgets/google_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:repository/features/home/presentation/pages/home_page.dart';
 
 class AuthPageBody extends StatelessWidget {
   const AuthPageBody({super.key});
@@ -22,6 +24,10 @@ class AuthPageBody extends StatelessWidget {
         return InkWell(
           onTap: () async {
             await BlocProvider.of<AuthCubit>(context).signInWithGoogle();
+            MovingNavigator.navToPage(
+              context: context,
+              page: const HomePage(),
+            );
           },
           child: Center(
             child: SizedBox(

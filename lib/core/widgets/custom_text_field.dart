@@ -7,15 +7,18 @@ class CustomTextField extends StatelessWidget {
       this.maxLines = 1,
       this.onSaved,
       this.onChanged,
-      this.keyboardType});
+      this.keyboardType,
+      this.controller});
   final String hint;
   final int maxLines;
   final void Function(String?)? onSaved;
   final Function(String)? onChanged;
+  final TextEditingController? controller;
   final TextInputType? keyboardType;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       keyboardType: keyboardType,
       // autofocus: true,
       onChanged: onChanged,

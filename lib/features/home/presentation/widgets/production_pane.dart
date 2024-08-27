@@ -20,7 +20,9 @@ class ProductionPane extends StatelessWidget {
       backgroundColor: Colors.blue,
       onPressed: (context) {
         MovingNavigator.navToPage(
-            context: context, page: const ProductionPage());
+          context: context,
+          page: const ProductionPage(),
+        );
         log("انتاج");
       },
     );

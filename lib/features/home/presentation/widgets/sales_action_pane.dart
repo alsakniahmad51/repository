@@ -18,7 +18,10 @@ class SalesActionPane extends StatelessWidget {
       icon: Icons.arrow_downward_outlined,
       backgroundColor: Colors.green,
       onPressed: (context) {
-        MovingNavigator.navToPage(context: context, page: const SalesPage());
+        MovingNavigator.navToPage(
+          context: context,
+          page: const SalesPage(),
+        );
         log("بيع");
       },
     );

@@ -12,13 +12,23 @@ class salesModel {
       required this.notes,
       required this.clientName});
 
-  static Map<String, dynamic> tojson({required salesModel sales}) {
+  static Map<dynamic, dynamic> tojson({required salesModel sales}) {
     return {
-      "sales": sales.sales,
+      "sallary": sales.sales,
       "salesdate": sales.salesDate.toString(),
       "orderid": sales.orderId,
       "notes": sales.notes,
       "clientName": sales.clientName
     };
+  }
+
+  factory salesModel.fromjson({required Map<dynamic, dynamic> json}) {
+    return salesModel(
+        sales: 5,
+        //json['sallary'],
+        salesDate: DateTime(2024, 3, 3),
+        orderId: json['orderid'],
+        notes: json['notes'],
+        clientName: json['clientName']);
   }
 }
