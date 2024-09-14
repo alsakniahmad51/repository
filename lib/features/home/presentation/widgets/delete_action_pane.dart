@@ -12,7 +12,7 @@ class DeleteActionPane extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SlidableAction(
-      label: "حذف الصنف",
+      label: "حذف",
       icon: Icons.delete_forever,
       backgroundColor: Colors.red,
       onPressed: (context) {

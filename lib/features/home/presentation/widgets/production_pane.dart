@@ -9,7 +9,9 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 class ProductionPane extends StatelessWidget {
   const ProductionPane({
     super.key,
+    required this.categoryName,
   });
+  final String categoryName;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,9 @@ class ProductionPane extends StatelessWidget {
       onPressed: (context) {
         MovingNavigator.navToPage(
           context: context,
-          page: const ProductionPage(),
+          page: ProductionPage(
+            categoryName: categoryName,
+          ),
         );
         log("انتاج");
       },

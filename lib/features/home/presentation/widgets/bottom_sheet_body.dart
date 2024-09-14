@@ -60,19 +60,23 @@ class _BottomSheetBodyState extends State<BottomSheetBody> {
 
                     await ref.update({
                       controller.text: {
-                        "production": {
-                          "count": 0,
-                          "date": "2024-04-02 00:00:00.000",
-                          "notes": "dddd",
-                          "weight": 0
-                        },
-                        "sallary": {
-                          "clientName": "عبدو",
-                          "notes": "",
-                          "orderid": 1300,
-                          "sallary": 0,
-                          "sallarydate": "2024-04-02 00:00:00.000"
-                        }
+                        "production": [
+                          {
+                            "count": 0,
+                            "date": "2024-04-02 00:00:00.000",
+                            "notes": "dddd",
+                            "weight": 0
+                          }
+                        ],
+                        "sallary": [
+                          {
+                            "clientName": "عبدو",
+                            "notes": "",
+                            "orderid": 1300,
+                            "sallary": 0,
+                            "sallarydate": "2024-04-02 00:00:00.000"
+                          }
+                        ]
                       },
                     });
                     controller.clear();

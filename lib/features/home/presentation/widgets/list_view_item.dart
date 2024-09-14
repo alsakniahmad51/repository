@@ -13,16 +13,20 @@ class ListViewItem extends StatelessWidget {
     required this.quantity,
     required this.categoryName,
   });
-  final int quantity;
+  final dynamic quantity;
   final String categoryName;
+
   @override
   Widget build(BuildContext context) {
     return Slidable(
       endActionPane: const ActionPane(
           motion: StretchMotion(), children: [DeleteActionPane()]),
-      startActionPane: const ActionPane(
-          motion: StretchMotion(),
-          children: [ProductionPane(), SalesActionPane()]),
+      startActionPane: ActionPane(motion: const StretchMotion(), children: [
+        ProductionPane(
+          categoryName: categoryName,
+        ),
+        const SalesActionPane()
+      ]),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         child: Container(

@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:repository/features/auth/presentation/manager/cubit/auth_cubit.dart';
 import 'package:repository/features/auth/presentation/pages/auth_page.dart';
-import 'package:repository/features/home/presentation/manager/cubit/data_cubit.dart';
+import 'package:repository/features/home/presentation/manager/cubit/home_cubit.dart';
 import 'package:repository/features/home/presentation/pages/home_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -42,6 +42,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           home: idToken != null ? const HomePage() : const AuthPage(),
+          //
         ),
       ),
     );
